@@ -1,11 +1,14 @@
 @import 'partials/vars'
+@import 'partials/board'
+@import 'partials/score'
+@import 'partials/game-status'
 
 *
   font-family: $primary-font,"Helvetica Neue", Arial, sans-serif
     size: 18px
 
 body
-  color: #3c5566
+  color: $secundary-blue
   font-family: $primary-font,"Helvetica Neue", Arial, sans-serif
     size: 18px
   margin: 0
@@ -21,130 +24,3 @@ h1
 
 .clearfix
   clear: both
-
-.score
-  text-align: center
-    left: 380px
-  border: solid 10px $primary-black
-    radius: 0 0 10px 10px
-    top: none
-  box-shadow: 0 5px 10px $primary-gray
-  background-color: $background-red
-  height: 100px
-  margin: 0 auto
-  width: 548px
-  p
-    color: $primary-white
-    font-size: 30px
-    font-weight: bold
-    margin: 30px 0 auto 100px
-    display: inline-block
-    float: left
-  span
-    color: $primary-white
-    font-size: 30px
-    font-weight: bold
-    margin: 30px 0 auto 100px
-    display: inline-block
-    float: left
-
-
-.game-board
-  background: grey
-  border: solid 10px $primary-black
-    radius: 10px 10px 0 0
-  box-shadow: 0 5px 10px $primary-gray
-  padding: 1px
-  width: 548px
-  margin: 0 auto
-
-  &__row
-    height: 100%
-    width: 100%
-
-  &__cell,
-  &__tile
-    background: rgba(225, 226, 241, 0.8)
-    box-sizing: border-box
-    height: 135px
-    float: left
-    margin: 1px
-    width: 135px
-
-  &__tile
-    background: rgba(225, 226, 241, 0.35)
-    box-sizing: border-box
-    color: #fff
-    float: none
-    font-size: 55px
-      weight: bold
-    padding-top: 30px
-    position: absolute
-    text-align: center
-      shadow: 1px 1px 3px #000
-
-  &-tile-position-0-0
-    transform: translate(0, 0)
-  &-tile-position-0-1
-    transform: translate(137px, 0)
-  &-tile-position-0-2
-    transform: translate(274px, 0)
-  &-tile-position-0-3
-    transform: translate(411px, 0)
-  &-tile-position-1-0
-    transform: translate(0, 137px)
-  &-tile-position-1-1
-    transform: translate(137px, 137px)
-  &-tile-position-1-2
-    transform: translate(274px, 137px)
-  &-tile-position-1-3
-    transform: translate(411px, 137px)
-  &-tile-position-2-0
-    transform: translate(0, 274px)
-  &-tile-position-2-1
-    transform: translate(137px, 274px)
-  &-tile-position-2-2
-    transform: translate(274px, 274px)
-  &-tile-position-2-3
-    transform: translate(411px, 274px)
-  &-tile-position-3-0
-    transform: translate(0, 411px)
-  &-tile-position-3-1
-    transform: translate(137px, 411px)
-  &-tile-position-3-2
-    transform: translate(274px, 411px)
-  &-tile-position-3-3
-    transform: translate(411px, 411px)
-
-  &-val-2
-    background: #93d2ff
-  &-val-4
-    background: #4ab5ff
-  &-val-8
-    background: #289cef
-  &-val-16
-    background: #2a72a3
-  &-val-32
-    background: #105a86
-  &-val-64
-    background: #00548c
-  &-val-128
-    background: #004777
-  &-val-256
-    background: #002c4a
-  &-val-512
-    background: #000F35
-  &-val-1024
-    background: #000921
-    font-size: 50px
-    padding-top: 35px
-  &-val-2048
-    background: #009894
-    font-size: 50px
-    padding-top: 35px
-
-.game-over
-  display: none
-
-.show-lost
-  display: block
