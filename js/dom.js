@@ -3,23 +3,23 @@ function renderTiles () {
   game.board.forEach(function(row, rowIndex){
     row.forEach(function (cell, cellIndex) {
       if (cell) {
-        var tileContainer = document.getElementById("tile-container");
+        var tileContainer = document.getElementsByClassName("game-board__tile-container");
+        console.log(tileContainer)
         var newTile       = document.createElement("div");
 
-        newTile.classList  = "tile val-" + cell;
-        newTile.classList += " tile-position-" + rowIndex + "-" + cellIndex;
+        newTile.classList  = "game-board__tile game-board-val-" + cell;
+        newTile.classList += " game-board-tile-position-" + rowIndex + "-" + cellIndex;
         newTile.innerHTML  = (cell);
-
+        console.log(newTile)
         tileContainer.appendChild(newTile);
       }
     });
   });
 }
-
 //esta funcion sirve para borrar las fichas del tablero
 function resetTiles () {
-  var tilesContainer = document.getElementById("tile-container");
-  var tiles          = tilesContainer.getElementsByClassName("tile");
+  var tilesContainer = document.getElementsByClassName("game-board__tile-container");
+  var tiles          = tilesContainer.getElementsByClassName("game-board__tile");
 
   Array.prototype.slice.call(tiles).forEach(function (tile) {
     tilesContainer.removeChild(tile);
@@ -29,7 +29,7 @@ function resetTiles () {
 // funcion que actualiza la puntuación
 function updateScore () {
   var score          = game.score;
-  var scoreContainer = document.getElementsByClassName("js-score");
+  var scoreContainer = document.getElementsByClassName("score__js");
 
   Array.prototype.slice.call(scoreContainer).forEach(function (span) {
     span.innerHTML = score;
@@ -39,9 +39,9 @@ function updateScore () {
 // controla si hemos ganado o perdido
 function gameStatus () {
   if (game.win()) {
-    document.getElementsByClassName("game-over").classList = "show-won";
+    document.getElementsByClassName("game-over").classList = "game-over__show-won";
   } else if (game.lose()) {
-    document.getElementsByClassName("game-over").classList = "show-lost";
+    document.getElementsByClassName("game-over").classList = "game-over__show-lost";
   }
 }
 
