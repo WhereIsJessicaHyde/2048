@@ -66,7 +66,7 @@ game._renderBoard();
 Game2048.prototype._updateScore = function (value) {
   this.score += value;
 
-  if (value === 2048) {
+  if (value === 8) {
     this.won = true;
   }
 

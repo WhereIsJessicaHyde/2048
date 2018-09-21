@@ -1,5 +1,8 @@
 @import 'partials/vars'
 
+*
+  font-family: $primary-font,"Helvetica Neue", Arial, sans-serif
+    size: 18px
 
 body
   color: #3c5566
@@ -9,23 +12,51 @@ body
   padding: 0
 
 h1
+  margin: 20px auto
+  color: $background-red
+  padding: 0
+  font:
+    size: 100px
   text-align: center
-  color: blue
 
 .clearfix
   clear: both
 
 .score
   text-align: center
-  margin-top: 7.5%
     left: 380px
+  border: solid 10px $primary-black
+    radius: 0 0 10px 10px
+    top: none
+  box-shadow: 0 5px 10px $primary-gray
+  background-color: $background-red
+  height: 100px
+  margin: 0 auto
+  width: 548px
+  p
+    color: $primary-white
+    font-size: 30px
+    font-weight: bold
+    margin: 30px 0 auto 100px
+    display: inline-block
+    float: left
+  span
+    color: $primary-white
+    font-size: 30px
+    font-weight: bold
+    margin: 30px 0 auto 100px
+    display: inline-block
+    float: left
+
 
 .game-board
   background: grey
-  border-radius: 4px
+  border: solid 10px $primary-black
+    radius: 10px 10px 0 0
+  box-shadow: 0 5px 10px $primary-gray
   padding: 1px
   width: 548px
-  margin: 1% auto
+  margin: 0 auto
 
   &__row
     height: 100%

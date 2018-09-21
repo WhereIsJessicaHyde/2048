@@ -1,3 +1,7 @@
+* {
+  font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    font-family-size: 18px; }
+
 body {
   color: #3c5566;
   font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
@@ -6,23 +10,49 @@ body {
   padding: 0; }
 
 h1 {
-  text-align: center;
-  color: blue; }
+  margin: 20px auto;
+  color: rgba(215, 44, 44, 0.8);
+  padding: 0;
+  font-size: 100px;
+  text-align: center; }
 
 .clearfix {
   clear: both; }
 
 .score {
   text-align: center;
-  margin-top: 7.5%;
-    margin-top-left: 380px; }
+    text-align-left: 380px;
+  border: solid 10px #000;
+    border-radius: 0 0 10px 10px;
+    border-top: none;
+  box-shadow: 0 5px 10px #999;
+  background-color: rgba(215, 44, 44, 0.8);
+  height: 100px;
+  margin: 0 auto;
+  width: 548px; }
+  .score p {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px 0 auto 100px;
+    display: inline-block;
+    float: left; }
+  .score span {
+    color: #FFF;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px 0 auto 100px;
+    display: inline-block;
+    float: left; }
 
 .game-board {
   background: grey;
-  border-radius: 4px;
+  border: solid 10px #000;
+    border-radius: 10px 10px 0 0;
+  box-shadow: 0 5px 10px #999;
   padding: 1px;
   width: 548px;
-  margin: 1% auto; }
+  margin: 0 auto; }
   .game-board__row {
     height: 100%;
     width: 100%; }

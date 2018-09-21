@@ -3,7 +3,7 @@ function renderTiles () {
   game.board.forEach(function(row, rowIndex){
     row.forEach(function (cell, cellIndex) {
       if (cell) {
-        var tileContainer = document.getElementsByClassName("game-board__tile-container");
+        var tileContainer = document.querySelector(".game-board__tile-container");
         console.log(tileContainer)
         var newTile       = document.createElement("div");
 
@@ -18,8 +18,8 @@ function renderTiles () {
 }
 //esta funcion sirve para borrar las fichas del tablero
 function resetTiles () {
-  var tilesContainer = document.getElementsByClassName("game-board__tile-container");
-  var tiles          = tilesContainer.getElementsByClassName("game-board__tile");
+  var tilesContainer = document.querySelector(".game-board__tile-container");
+  var tiles          = tilesContainer.querySelectorAll(".game-board__tile");
 
   Array.prototype.slice.call(tiles).forEach(function (tile) {
     tilesContainer.removeChild(tile);
